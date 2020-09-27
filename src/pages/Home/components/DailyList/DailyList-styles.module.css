@@ -24,3 +24,8 @@ ul {
     max-width: 210px;
   }
 }
+
+.bar {
+  width: 0.5px;
+  background-color: #c7c7c725;
+}
