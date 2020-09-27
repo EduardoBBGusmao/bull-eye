@@ -1,0 +1,26 @@
+li ::marker {
+  display: none;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  margin: 0 5px;
+  width: 80px;
+  height: 70px;
+}
+
+ul {
+  display: flex;
+  overflow: auto;
+  white-space: nowrap;
+  height: 80px;
+  max-width: 620px;
+}
+
+@media screen and (max-width: 600px) {
+  ul {
+    max-width: 210px;
+  }
+}
