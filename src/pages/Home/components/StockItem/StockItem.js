@@ -1,25 +1,24 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
 import styles from './StockItem-styles.module.css'
 export default function StockItem (props) {
   const stock = props.stock
 
   const checkStockChange = (stockChange) => {
-    // stockChange.replace('%', '')
+    var choosenArrow = <></>
+    var style = ''
     const stockChangeNum = parseFloat(stockChange)
     if (stockChangeNum > 0) {
-      return (
-        <div className={styles.positive}>
-          &uarr; {stockChangeNum}
-        </div>
-      )
+      choosenArrow = <>&uarr;</>
+      style = styles.positive
+    } else if (stockChangeNum < 0) {
+      choosenArrow = <>&darr;</>
+      style = styles.negative
     }
-    if (stockChangeNum < 0) {
-      return (
-        <div className={styles.negative}>
-          &darr; {stockChangeNum}
-        </div>
-      )
-    }
+    return (
+      <div className={style}>
+        {choosenArrow} {stockChangeNum}%
+      </div>
+    )
   }
   return (
     <>

@@ -13,7 +13,8 @@
     "prop-types": "^15",
     "react": "^16",
     "react-dom": "^16",
-    "react-hot-loader": "^4"
+    "react-hot-loader": "^4",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "@neutrinojs/jest": "^9.4.0",
@@ -25,5 +26,8 @@
     "webpack": "^4",
     "webpack-cli": "^3",
     "webpack-dev-server": "^3"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }
