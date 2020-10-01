@@ -1,5 +1,8 @@
 import styled from 'styled-components'
 export const Title = styled.div`
-  width: 600px;
-  height: 40px;
+
+  @media(max-width: 800px) {
+    flex-direction: column;
+    position: relative;
+  }
 `

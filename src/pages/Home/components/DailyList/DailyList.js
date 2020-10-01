@@ -1,6 +1,6 @@
 import React from 'react'
 import StockItem from '../StockItem'
-import styles from './DailyList-styles.module.css'
+import { List, Item, Bar } from './DailyList-styles.js'
 
 export default function DailyList (props) {
   const stocks = [
@@ -15,20 +15,20 @@ export default function DailyList (props) {
 
   const getSideBar = (length, index) => {
     if (index < length - 1) {
-      return <div className={styles.bar} />
+      return <Bar />
     }
   }
   return (
-    <ul>{
+    <List>{
       stocks.map((stock, index) =>
         <>
-          <li key={stock.name}>
+          <Item key={index}>
             <StockItem stock={stock} />
-          </li>
+          </Item>
           {getSideBar(stocks.length, index)}
         </>
       )
     }
-    </ul>
+    </List>
   )
 }

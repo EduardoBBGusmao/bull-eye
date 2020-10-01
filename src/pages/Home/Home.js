@@ -10,12 +10,12 @@ export default function Home () {
   return (
     <Container>
       <div>
-        <ContainerComponent component={DailyList} />
-        <ContainerComponent component={ComparativeGraph} />
-      </div>
-      <div>
         <ContainerComponent component={Wallet} />
         <ContainerComponent component={InvestmentsAlloc} />
+      </div>
+      <div>
+        <ContainerComponent component={DailyList} />
+        <ContainerComponent component={ComparativeGraph} />
       </div>
     </Container>
   )

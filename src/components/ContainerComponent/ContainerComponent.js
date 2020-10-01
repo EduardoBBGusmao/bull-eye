@@ -1,11 +1,11 @@
 import React from 'react'
-import styles from './ContainerComponent-styles.module.css'
+import { Container } from './ContainerComponent-styles.js'
 
-export default function ContainerComponent (props) {
-  const PropComponent = props.component
+export default function ContainerComponent ({ component = <></> }) {
+  const PropComponent = component
   return (
-    <div className={styles.container}>
+    <Container>
       <PropComponent />
-    </div>
+    </Container>
   )
 }
